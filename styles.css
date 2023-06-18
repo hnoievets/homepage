@@ -88,7 +88,7 @@ body {
 .contact-info__block {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: end;
 }
 
 .contact-info__block--center {
@@ -97,9 +97,20 @@ body {
 
 .contact-info__item {
     color: var(--secondary-text-color);
+    fill: var(--icon-color);
     text-decoration: none;
     display: flex;
     justify-content: start;
+    cursor:default;
+}
+
+.contact-info__item-link {
+    cursor: pointer;
+}
+
+.contact-info__item-link:hover {
+    color: var(--text-decoration-color);
+    fill: var(--text-decoration-color);
 }
 
 .contact-info__item:not(:last-child) {
@@ -113,10 +124,6 @@ body {
     justify-content: center;
 }
 
-.contact-info__item-icon path {
-    fill: var(--icon-color);
-}
-
 .contact-info__item-icon {
     height: 1.1428rem;
     vertical-align: text-bottom;
@@ -124,8 +131,8 @@ body {
 
 .contact-info__avatar {
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
+    width: 125px;
+    height: 125px;
     object-fit: cover;
     border: 3px solid;
     border-color: var(--text-decoration-color);
@@ -155,6 +162,17 @@ body {
 .intro_text {
     color: var(--secondary-text-color);
     text-align: justify;
+}
+
+.intro_book {
+    text-decoration: none;
+    color: var(--secondary-text-color);
+    text-decoration: underline;
+    text-decoration-color: var(--text-decoration-color);
+}
+
+.intro_book:hover{
+    color: var(--text-decoration-color);
 }
 
 .skills__header {
@@ -199,13 +217,6 @@ body {
     margin-bottom: 25px;
 }
 
-.experiences__company-project-role {
-    color: var(--durability-text-color);
-    text-align: left;
-    margin-bottom: 10px;
-    font-size: 15px;
-}
-
 .experiences__company-project-name {
     color: var(--primary-text-color);
     text-align: left;
@@ -218,7 +229,7 @@ body {
 }
 
 .additional-info {
-    flex: 1 1 40%;
+    flex: 1 1 50%;
 }
 
 .additional-info__education {
